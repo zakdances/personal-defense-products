@@ -1,3 +1,32 @@
 .border-right {
     border-right: 4px solid pink;
 }
+
+.serif {
+    font-family: 'Lora', serif;
+    font-style: italic;
+}
+
+.line-heading {
+    display: flex;
+    align-items: center;
+    &:after {
+        content: '';
+        height: 4px;
+        display: block;
+        flex-grow: 1;
+        background-color: #ffe6b6;
+    }
+}
+
+.line-heading-sm {
+    display: flex;
+    align-items: center;
+    &:after {
+        content: '';
+        height: 2px;
+        display: block;
+        flex-grow: 1;
+        background-color: grey;
+    }
+}

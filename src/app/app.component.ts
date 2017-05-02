@@ -35,4 +35,11 @@ export class AppComponent {
       img: 'assets/taser1.png'
     }
   ];
+  heroSeleceted = 0;
+  selectedValue: string;
+  foods = [
+    {value: 'steak-0', viewValue: 'Steak'},
+    {value: 'pizza-1', viewValue: 'Pizza'},
+    {value: 'tacos-2', viewValue: 'Tacos'}
+  ];
 }

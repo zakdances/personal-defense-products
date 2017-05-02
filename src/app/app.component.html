@@ -1,6 +1,9 @@
 <md-toolbar class='mmat-elevation-z5' color="primary">
-    <span>Kandi's Land&nbsp;</span>
-    <span class='subtitle fw3'>Your personal defense superstore.</span>
+    <span class='logo'>Kandi's Land&nbsp;&nbsp;</span>
+    <span class='spacer'></span>
+    <span class='fa fa-shield'></span>
+    <span class='subtitle fw3 i'>&nbsp;Your personal defense store.&nbsp;</span>
+    <span class='fa fa-shield'></span>
     <span class='spacer'></span>
     <span>Checkout (0)</span>
     <!--<button md-raised-button>BUY</button>-->
@@ -19,51 +22,118 @@
 </md-toolbar>
 
 <div class='hero mww8'>
-    <div class='text mw8'>
+    <div class='bg'>
+        <h1 class='f-subheadline ttu dark-grey fw5 lh-solid seriff'>Featured <span class='fw6'>.</span></h1>
+    </div>
+    <div class='text mw9'>
         <!--<div>welcome</div>-->
         <!--<h1>
         {{title}}
     </h1>-->
-        <h1 class='f-subheadline ttu dark-grey fw5 lh-solid'>Featured <span class='fw6'>.</span></h1>
-        <div class='details-box'>
+        <!--<h1 class='f-headline ttu dark-grey fw5 lh-solid seriff'>Featured <span class='fw6'>.</span></h1>-->
+        <!--<div class='details-box'>
             <h5>Name</h5>
 
+        </div>-->
+        <!--<button md-raised-button>BUY</button>-->
+        <h1 class='f3 fw2 serif'>{{products[heroSeleceted].title}}</h1>
+        <div class='details-box mat-elevation-z1'>
+            <button md-raised-button>BUY</button>
+            <label>{{products[heroSeleceted].price | currency:'USD':true:'1.2-2'}}</label>
         </div>
-        <button md-raised-button>BUY</button>
+
     </div>
     <div class='item-box'>
         <div class='featured-img'></div>
     </div>
 
 </div>
-<div class='ribbon mmat-elevation-z1'>
+<div class='ribbon mw8 mmat-elevation-z1'>
     Latest News
 </div>
 
 <div class='submenu mmat-elevation-z2'>
-    <div class='mw8'>
-        Hello! I'm candy
+    <div class='max-width'>
+        <!--<div>Hello! I'm Kandi. Welcome to my store.</div>-->
+        <div>
+            <h1 class='f2 ttu dark-grey fw5 lh-solid seriff'>Hello <span class='fw6'>.</span></h1>
+        </div>
+        <div class='f3 serif line-heading-smm'>
+            Hello! I'm Kandi. Welcome to my store.
+        </div>
     </div>
 
+
 </div>
+<!--<div class='max-width'>
+    <h1 class='f3 fw6 seriff line-headingg lh-title'>The Store</h1>
+    <!--<h1 class='f1 lh-title ttu dark-gray fw4 line-heading serif' style='margin-top: 0'>All Products<span class='fw2'>.//</span></h1>-->
+<!--<h1 class='f5 lh-title ttu dark-gray fw4 line-heading serif' style='background-color: aliceblue;'>All Products<span class='fw2'><br>.//</span></h1>-->
+<!--</div>-->
+<!--<div class='max-width' style='padding: 0 1rem;'>
+    <h1 class='f3 fw6 seriff line-headingg'>All Products</h1>
+    <h1 class='f2 lh-title ttu dark-gray fw4 line-headingg serif' style='margin-bottom: 0'>All Products<span class='fw2'>.//</span></h1>
+    <h1 class='f5 lh-title ttu dark-gray fw4 line-headingg serif' style='background-color: aliceblue;'>All Products<span class='fw2'><br>.//</span></h1>
+</div>-->
+<div class='mw8 center'>
+    <div class='f1 serif line-heading-smm'>
+        All Products
+    </div>
+    <md-toolbar class='mmat-elevation-z5' color="primary">
+        <md-toolbar-row>
+            <span class='f4 fw4 serif i line-headingg' style='flex-grow: 1;'>All Products&nbsp;&nbsp;</span>
+            <!--<span class='spacer'></span>-->
+            <span class='f3 fa fa-shield fa-flip-horizontal'></span>
+            <span>&nbsp;</span>
+            <span class='f1 fa fa-shield'></span>
+            <!--<span class='subtitle fw3'>&nbsp;All Products&nbsp;</span>-->
+            <span>&nbsp;</span>
+            <span class='f3 fa fa-shield line-headingg' style='flex-groww: 1;'></span>
+            <span class='spacer'></span>
+            <span>Items (0)</span>
+        </md-toolbar-row>
+        <md-toolbar-row style='display: none;'>
+            <span class='f5' style='color: #ccc;'>4 Items Total</span>
+            <md-select placeholder="Filter" [(ngModel)]="selectedValue" name="food">
+                <md-option *ngFor="let food of foods" [value]="food.value">
+                    {{food.viewValue}}
+                </md-option>
+            </md-select>
+            <span class='spacer'></span>
+            <button md-raised-button>BUY</button>
+            <!--<span class="example-spacer"></span>-->
+            <!--<md-icon class="example-icon">verified_user</md-icon>-->
+        </md-toolbar-row>
 
+    </md-toolbar>
+</div>
 <div class='main-column mmat-elevation-z5 mw8'>
-
+    <md-grid-list cols="4" rowHeight="300px">
+        <md-grid-tile *ngFor="let product of products" [colspan]="1" [rowspan]="1" [style.background]="'snow'">
+            <div>
+                {{product.title}}
+                <img md-card-imagee [src]="product.img">
+            </div>
+        </md-grid-tile>
+    </md-grid-list>
 
     <!--<div class='top-title'></div>-->
-    <h1 class='f3 lh-title ttu dark-gray fw6'>All <span class='fw3'>.//</span></h1>
+    <!--<h1 class='f1 lh-title ttu dark-gray fw4 line-heading serif'>All Products<span class='fw2'>.//</span></h1>-->
+    <!--<h1 class='f5 lh-title ttu dark-gray fw4 line-heading serif' style='background-color: aliceblue;'>All Products<span class='fw2'><br>.//</span></h1>-->
     <!--<md-toolbar class='mmat-elevation-z1' style='background-color: white;'>
         <h1 class='f-subheadline lh-solid ttu dark-gray fw5'>All Products <span class='fw6'>.//</span></h1>
     </md-toolbar>-->
     <div class='content-area mmat-elevation-z5'>
+
         <!--<h2>Products</h2>-->
         <md-card class="product-cell mat-elevation-z1" *ngFor="let product of products">
+
+            <img md-card-image [src]="product.img">
             <md-card-header>
                 <div md-card-avatar class="example-header-image"></div>
                 <md-card-title>{{product.title}}</md-card-title>
                 <md-card-subtitle>{{product.price | currency:'USD':true:'1.2-2'}}</md-card-subtitle>
             </md-card-header>
-            <img md-card-image [src]="product.img">
             <md-card-content>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -81,8 +151,8 @@
 
 </div>
 <div class='ribbon bottom-bucket mmat-elevation-z2'>
-    <div class='mw8'>
-        Hello! I'm candy
+    <div class='max-width'>
+        <h3 class='serif fw2 f1'>Your Shopping Cart</h3>
     </div>
 
 </div>
@@ -92,7 +162,11 @@
     <div class='border-right'></div>
     <div class='border-right'></div>
 </div>
-<div class='footer'></div>
+<div class='footer'>
+    <div>
+        About Us
+    </div>
+</div>
 <div class='ribbon flags mat-elevation-z3'>
     <div class='border-right'></div>
     <div class='border-right'></div>
