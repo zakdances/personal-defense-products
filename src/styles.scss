@@ -123,9 +123,10 @@ md-toolbar {
         margin-right: auto;
         display: flex;
         >div:nth-child(1) {
-            width: 15rem;
+            width: 40%;
             height: 12rem;
-            background-color: aliceblue;
+            color: rgba(255, 127, 80, 0.4);
+            background-color: #fff0e5;
         }
         >div:nth-child(2) {
             padding: 2rem;
@@ -170,11 +171,11 @@ md-toolbar {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        h1 {
-            // margin: 0;
-            // color: #ff8f8f; #c4d8ff #f9e3ef fdddee
-            // color: white;
-        }
+        // h1 {
+        // margin: 0;
+        // color: #ff8f8f; #c4d8ff #f9e3ef fdddee
+        // color: white;
+        // }
         .details-box {
             width: 13rem;
             // height: 2rem;
