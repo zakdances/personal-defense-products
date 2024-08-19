@@ -1,4 +1,4 @@
-# PdpWebsite (project discontinued)
+# PdpWebsite (project ended, was only proof of concept for small retail business)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.1.
 
