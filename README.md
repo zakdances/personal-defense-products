@@ -1,4 +1,4 @@
-# PdpWebsite (project ended, was only proof of concept for small retail business)
+# PdpWebsite (project ended, was only proof of concept for small retail business selling tazers)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.1.
 
